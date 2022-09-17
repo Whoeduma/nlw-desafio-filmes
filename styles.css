@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+}
+body {
+    background-image: url(./assets/fundo.jpg);
+    background-repeat: no-repeat;
+    background-color: #121214;
+    background-size: 100% auto;
+    background-position: top center;
+}
+
+body *{
+    font-family: 'Montserrat', 'sans-serif';
+    line-height: 160%;
+}
+
+header{
+    padding-top: 32px;
+    height: calc(120px + 32px);
+
+}
+
+header div {
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg,#6867AC, #A267AC, #CE7BB0);
+    border-radius: 50%;
+    display: flex;
+    padding: 4px;
+    transition: transform .3s;
+}
+
+header div img {
+    width: 100%;
+    border-radius: 50%;
+    
+}
+
+/*hover*/
+header div:hover{
+    transform: scale(1.1);
+}
+
+section ul li:hover{
+    transform:scale(1.1) ;
+}
+
+section ul li{
+    transition: transform .3s;
+}
+
+
+main{
+    max-width: 580px; /*Quando a tela for menor que 580px é bom utilizar width de 90%*/
+    width: 90%;
+    margin: 32px auto; /*utilizar para centralizar, margin vai fazer um calculo que vai automaticamente utilizar as margens*/
+    display: grid;
+    gap: 24px;
+}
+
+ul{
+    list-style: none;
+}
+
+
+section{
+    color: white;
+    background-image: linear-gradient(90deg, #6867AC, #A267AC, #CE7BB0);
+    padding-top: 4px;
+    border-radius: 10px;
+}
+
+section p{
+    letter-spacing: -0.18px;
+    color: #C1C1C1;
+}
+
+section ul {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+
+
+}
+
+.film-list img{
+    border-radius: 8px;
+    width: 90px;
+    border: 1px solid #555555;
+
+}
+
+.series-list img {
+    border-radius: 8px;
+    width: 90px;
+    border: 1px solid #555555;
+}
+
+/*cards*/
+section div{
+    background-color: #262629;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+/*animation*/
+header div {
+    animation: fromTop .6s .2s backwards;
+}
+@keyframes fromTop{
+    from{
+        opacity: 0;
+        transform: translateY(-30);
+    }
+
+    
+    to{
+        opacity: 1;
+        transform: translateY(0);
+        
+    }
+}
+
+main section{
+    animation: fromBottom .6s backwards;
+}
+
+main section:nth-child(1){
+    animation-delay: 0;
+}
+
+main section:nth-child(2){
+    animation-delay: .3s;
+}
+
+main section:nth-child(3){
+    animation-delay: .6s;
+}
+
+@keyframes fromBottom {
+    from{
+        opacity: 0;
+        transform: translateY(30);
+    }
+
+    
+    to{
+        opacity: 1;
+        transform: translateY(0);
+        
+    }
+
+}
